@@ -1,0 +1,115 @@
+    *{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .header {
+     display: flex;
+     justify-content: center;
+     margin-top: 60px;
+    }
+
+    .left{
+        width: 500px;
+        padding: 6%;
+        padding-left: 22px;
+    }
+
+    .right{
+        width: 500px;
+        padding: 6%;
+        padding-right: 22px;
+    }
+
+    .header .htext {
+        display: absolute;
+        margin-top: 120px;
+        text-align: center;
+       }
+
+       .header > h1{
+        font-weight: bolder;
+       }
+
+    .logo{
+        text-align: center;
+        padding-top: 40px;
+    }
+
+    .download{
+        background-color: aqua;
+        border-radius: 30px;
+        text-decoration: none;
+        padding: 8px 15px;
+        
+    }
+
+    .what{
+        background: aqua;
+        border-radius: 30px;
+        text-decoration: none;
+        padding: 8px 15px;
+    }
+
+    .buttons{
+        justify-content: center;
+    }
+
+    .midimages{
+        display: flex;
+        justify-content: center;
+        display: absolute;
+    }
+
+    .midimages > img {
+        width: 20%;
+        line-height: 75px;
+        margin: 10px;
+        margin-top: 200px;
+      }
+
+      .iop{
+        text-align: center;
+        margin-top: 95px;
+      }
+
+      .foottext{
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+        text-align: left;
+        align-items: center;
+        padding-left: 40px;
+        
+      }
+
+      .footer{
+        background-image: url(./assets/desktop/image-footer.jpg);
+        background-position: center;
+        background-size: cover;
+        border-bottom: 0px;
+        background-size: fit-content;
+        z-index: 1;
+        position: relative;
+        background: cover;
+        top: 0;
+        left: 0;
+      }
+
+      .footer::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: "0";
+        width: 100%;
+        height: 100%;
+        background-color: blue;
+        opacity: 0.5;
+        z-index: -1;
+        background-blend-mode: multiply;
+      }
