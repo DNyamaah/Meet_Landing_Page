@@ -225,6 +225,21 @@
         width: 100%;
         background-size: contain;
       }
+
+      .body {
+        font-size: 16px;
+      }
+    
+      .logo {
+        width: 100%;
+        text-align: center;
+      }
+    
+      .sec {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
 }
 
     /* styles for mobile phones */
@@ -236,8 +251,39 @@
         background-size: contain;
       }
 
-      .header > .htext{
-        top: 900px;
+      .body {
+        font-size: 16px;
+      }
+    
+      .logo {
+        width: 100%;
+        text-align: center;
+      }
+    
+      .sec {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
       }
 
     }
+
+    @media only screen and (max-width: 767px) {
+      .body {
+        font-size: 16px;
+      }
+    
+      .logo {
+        width: 100%;
+        text-align: center;
+      }
+    
+      .sec {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+    
+      /* other styles for smaller screens... */
+    }
+    
