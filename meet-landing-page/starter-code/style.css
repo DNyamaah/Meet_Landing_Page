@@ -235,55 +235,9 @@
         text-align: center;
       }
     
-      .sec {
+      .htext {
         display: flex;
         flex-direction: column;
         align-items: center;
       }
 }
-
-    /* styles for mobile phones */
-    @media only screen and (max-device-width: 956px) {
-      .sec{
-        background-image: url('./assets/tablet/image-hero.png');
-        justify-content: center;
-        width: 100%;
-        background-size: contain;
-      }
-
-      .body {
-        font-size: 16px;
-      }
-    
-      .logo {
-        width: 100%;
-        text-align: center;
-      }
-    
-      .sec {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-
-    }
-
-    @media only screen and (max-width: 767px) {
-      .body {
-        font-size: 16px;
-      }
-    
-      .logo {
-        width: 100%;
-        text-align: center;
-      }
-    
-      .sec {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-      }
-    
-      /* other styles for smaller screens... */
-    }
-    
