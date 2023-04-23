@@ -470,8 +470,7 @@
   .footer{
     background-image: url('./assets/mobile/image-footer.jpg');
     position: relative;
-    top: -540px;
-    margin-bottom: -50px;
+    margin-bottom: -100px;
 
   }
 
@@ -519,7 +518,7 @@
     display: absolute;
     font-weight: bold;
     position: absolute;
-    top: 1390px;
+    top: 1520px;
     z-index: 3;
     background-color: #fafafa;
   }
