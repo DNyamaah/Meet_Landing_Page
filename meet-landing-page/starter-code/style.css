@@ -81,7 +81,8 @@ body {
 }
 
 .down,
-.what {
+.what, 
+.downloadf {
   font-size: 16px;
   background-color: #4CAF50;
   border: none;
@@ -105,6 +106,10 @@ body {
   background-color: #855FB1;
 }
 .what:hover{
+  background-color: #D9B8FF;
+}
+
+.downloadf:hover {
   background-color: #D9B8FF;
 }
 
@@ -179,13 +184,17 @@ body {
 
 
 
-.oww2{
+.oww2 {
   display: flex;
   align-items: center;
   flex-direction: column;
   margin-top: 180px;
   margin-bottom: 20px;
+  position: relative;
+  z-index: 2; 
 }
+
+
 
 .vertical-line2 {
   width: 1px;
@@ -196,22 +205,22 @@ body {
 
 .midimgs {
   display: flex;
-  gap: 30px;
   justify-content: center;
+  gap: 30px;
+  max-width: 100%;
   width: 1110px;
   height: 242px;
-  margin: 0 auto;
-  margin-top: 130px;
-  max-width: 100%;
-  aspect-ratio: 16/9;
+  margin: 130px auto 0;
+
 }
 
 .midimgs > img {
   border-radius: 10px;
   max-width: 100%;
-  position: relative;
-  
+  height: 100%;
+  object-fit: cover;
 }
+
 
 .lowertext {
   position: relative;
@@ -271,19 +280,22 @@ body {
 .footer {
   background: url('./assets/desktop/image-footer.jpg');
   position: relative;
-  z-index: -1;
+  z-index: 1;
   margin-top: 250px;
   margin-top: -50px;
+  margin: 0;
 }
+
 
 .foottext {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  gap: 40px;
   align-items: center;
   color: #fff;
   padding: 60px;
-  width: auto;
+  width: 100% auto;
   margin:20px;
 }
 
@@ -313,26 +325,6 @@ body {
   z-index: -1;
 }
 
-.downloadf {
-  font-size: 16px;
-  background-color: #855FB1;
-  border: none;
-  color: #fff;
-  padding: 8px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  margin: 4px 8px;
-  cursor: pointer;
-  border-radius: 70px;
-  border-radius: 29px;
-  font-weight: 900;
-}
-
-.downloadf:hover{
-  background-color: #D9B8FF;
-}
-
 .fbutton span {
   font-family: 'Red Hat Display';
   font-weight: 900;
@@ -350,7 +342,7 @@ body {
 
 .downloadf{
   font-size: 16px;
-  background-color: #4CAF50;
+  background-color: #855FB1;
   border: none;
   color: white;
   padding: 15px 32px;
@@ -364,8 +356,8 @@ body {
   font-weight: 900;
 }
 
-.downloadf {
-  background-color: #855FB1;
+.downloadf:hover {
+  background-color: #D9B8FF;
 }
 
 @media only screen and (max-width: 1100px){
@@ -493,7 +485,7 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    top: 10px;
+    top: 38px;
     margin-bottom: 20px;
   }
 
@@ -514,7 +506,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-top: -250px;
+    margin-top: -290px;
   }
   
   .footer {
@@ -525,11 +517,19 @@ body {
   }
 
   .midimgs {
-    display: flex;
     flex-wrap: wrap;
-    max-width: 500px;
-    position: relative;
-    right: 45px;
+    gap: 17px;
+    height: auto;
+    padding: 20px;
+
+  }
+
+  .midimgs > img {
+    flex: 1 1 calc(50% - 10px);
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+
   }
 
   .footer::before {
@@ -544,31 +544,31 @@ body {
     z-index: -1;
   }
 
-  .foottext {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
+  .footer {
+    background-color: #4D96A9;
     color: #fff;
-    padding: 60px;
+    padding: 40px;
     text-align: center;
-    gap: 10px;
-    width: 100%;
+    margin: 0;
   }
-
-  .foottext h1{
-    font-family: 'Red Hat Display';
+  
+  .fbutton {
+    margin-bottom: 40px;
   }
-
-  .foottext p{
-    font-family: 'Red Hat Display';
+  
+  .downloadf {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #855FB1;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
   }
-
-  .footer p {
-    font-size: 13px;
-    line-height: 20px;
-    font-style: normal;
-    font-weight: 500;
+  
+  .downloadf span {
+    font-size: 14px;
+    margin-left: 5px;
   }
 
   .fbutton{
@@ -580,10 +580,10 @@ body {
 
   .lowertext {
     position: relative;
-    top: 120px;
+    top: -10px;
     width: 100%;
     }
-  
+
   .lowertext span {
     font-size: 16px;
   }
@@ -599,16 +599,18 @@ body {
     align-items: center;
   }
 
-  .buttons{
+  .buttons {
     display: flex;
     flex-direction: column;
     gap: 10px;
     font-size: 16px;
     justify-content: center;
-    left: 210px;
-    padding: 90px;
-    width: 90%;
-    top: 200px;
+    align-items: center;
+    padding: 20px; 
+    width: 100%; 
+    position: relative;
+    top: 100px; 
+    left: 0; 
   }
 
   .down ,.what{
@@ -619,14 +621,18 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center; 
+    width: 100%;
     position: relative;
-    top: 220px;
-    width:100%
+    padding: 20px; 
+    top: 200px; 
+    left: 0; 
   }
 
-  .midinfo{
+  .midinfo {
     position: relative;
     top: 50px;
+    text-align: center; 
   }
 
  .midinfo h1{
@@ -636,7 +642,7 @@ body {
 
  .midinfo p{
   font-weight: 500;
-  font-size: 14px;
+  font-size: 16px;
 }
 
   .images {
@@ -646,11 +652,12 @@ body {
     background-size: 100% auto;
   }
 
-  .oww{
+  .oww {
     position: relative;
     top: 120px;
     font-size: 16px;
     padding: 20px;
+    text-align: center; 
   }
 
   .oww2{
@@ -658,28 +665,43 @@ body {
     display: flex;
     align-items: center;
     flex-direction: column;
-    top: 1px;
+    top: 30px;
     margin-bottom: 20px;
   }
 
   .footer {
     background: url('./assets/mobile/image-footer.jpg');
     background-repeat: no-repeat;
-    background-size: 100% auto;
+    background-size: cover;
     width: 100%;
-    position: relative;
-    z-index: -1;
+    padding: 20px;
+    box-sizing: border-box;
+    margin: 0;
   }
 
   .footer h1 {
     font-size: 32px;
-    line-height: 26px;
     font-style: normal;
     font-weight: 800;
+    width: 300px;
   }
 
-  .downloadf{
-    font-size: 13px;
+  .foottext {
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+  }
+  
+
+  .footer p {
+    font-size: 16px;
+    line-height: 20px;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .downloadf {
+    font-size: 16px;
     background-color: #855FB1;
     border: none;
     color: white;
@@ -692,6 +714,9 @@ body {
     border-radius: 70px;
     border-radius: 29px;
     font-weight: 900;
+    width: 100%; 
+    max-width: 200px; 
+    margin: 0 auto; 
   }
 
 }
